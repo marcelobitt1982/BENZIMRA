@@ -7,11 +7,15 @@
 }
 
 body, html {
-    background-color: #ffffff;
+    background-color: #E6E3D9;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    
 }
 
 header {
-    background-color: #00afd0;
+    background-color: #00AFD0;
     min-height: 80px;
     text-align: center;
     text-align: center;
@@ -22,13 +26,17 @@ header > h1 {
     text-align: center;
 }
 
+
+
 header > img {
-    max-width: 800px;
-    margin-top: 0px;
+    
+    max-width: 500px;
+    margin: auto;
     margin-bottom: 0px;
     padding: 0px;
     text-align: center;
 }
+
 
 span#burguer {
     background-color: rgb(48, 48, 48);
