@@ -4,107 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Hambúrguer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #222;
-            color: white;
-        }
-
-        .menu-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 15px 20px;
-        }
-
-        .menu-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .hamburger {
-            cursor: pointer;
-            font-size: 30px;
-            display: none;
-        }
-
-        .menu {
-            list-style: none;
-            padding: 0;
-            display: flex;
-        }
-
-        .menu li {
-            margin: 0 15px;
-        }
-
-        .menu li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 12px;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .menu li a:hover {
-            background-color: #f04;
-            border-radius: 5px;
-        }
-
-        /* Estilos para dispositivos móveis */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                background-color: #444;
-                padding: 10px 0;
-            }
-
-            .menu li {
-                text-align: center;
-                margin: 10px 0;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <nav class="menu-container">
-        <div class="menu-title">Meu Site</div>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul class="menu">
-            <li><a href="#">Primeira Temporada</a></li>
-            <li><a href="#">Segunda Temporada</a></li>
-            <li><a href="#">Terceira Temporada</a></li>
-            <li><a href="#">Cabaça Pro</a></li>
-            <li><a href="#">Cabaça Out</a></li>
-            <li><a href="#">Cabaça Religiões</a></li>
-            <li><a href="#">TBT</a></li>
+    <button class="hamburger">&#9776;</button>
+    <nav class="menu">
+        <ul>
+            <li><button onclick="showSeason(1)">Temporada 1</button></li>
+            <li><button onclick="showSeason(2)">Temporada 2</button></li>
         </ul>
     </nav>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector(".menu").classList.toggle("active");
-        }
-    </script>
-
+    <div id="participants"></div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
